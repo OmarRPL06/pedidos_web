@@ -34,7 +34,32 @@ class ClientesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+            'nombres' => 'required', 'string', 'max:255',
+            'email' => 'required', 'email', 'min:8',
+            'telefono' => 'required',
+            'calle' => 'required',
+            'num_calle' => 'required',
+            'colonia' => 'required',
+            'ciudad' => 'required',
+            'municipio' => 'required',
+            'estado' => 'required',
+            'c_postal' => 'required'
+        ],[
+            'nombres.required' => 'Escribe tu Nombre Completo con Apellidos',
+            'email.required' => 'Escribe tu Correo Electrónico',
+            'email.email' => 'La dirección de Correo Electronico no es valido',
+            'telefono.required' => 'Igresa tu numero Telefónico',
+            'calle.required' => 'Igresa el nombre de la Calle',
+            'num_calle.required' => 'Igresa el numero de la Calle',
+            'colonia.required' => 'Igresa el nombre de la Colonia',
+            'ciudad.required' => 'Igresa el nombre de la Ciudad',
+            'municipio.required' => 'Igresa el municipio',
+            'estado.required' => 'Igresa el estado',
+            'c_postal.required' => 'Igresa el codigo postal de la ciudad'
+        ]);
+
+        return false;
     }
 
     /**
