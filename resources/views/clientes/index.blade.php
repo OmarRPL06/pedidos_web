@@ -56,7 +56,7 @@
                         <label for="" class="form-label">Ciudad:</label>
                         <input type="text" class="form-control" id="" name="ciudad"
                             placeholder="Ingrese la ciudad de donde vive..." required
-                            pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ0-9\s]{1,254}" title="Solo Letras y numeros">
+                             title="Solo Letras y numeros">
                     </div>
                     <div class="col-md-3">
                         <label for="" class="form-label">Municipio:</label>

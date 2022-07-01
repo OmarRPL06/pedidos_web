@@ -18,3 +18,8 @@ body {
     padding: 20px;
     font-weight: 500;
 }
+
+.container-map {
+    padding-top: 35px;
+    padding-bottom: 40px;
+}
