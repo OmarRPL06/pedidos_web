@@ -13,9 +13,9 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a href="{{ url("/index/cliente/omar") }}"><img src="/img/logo.png" alt="" width="72" height="40"></a>
+        <a href="{{ url("/") }}"><img src="/img/logo.png" alt="" width="72" height="40"></a>
         <div class="container-fluid">
-            <a class="navbar-brand" href="{{ url("/index/cliente/omar") }}">Pedidos UTS</a>
+            <a class="navbar-brand" href="{{ url("/") }}">Pedidos UTS</a>
             <div class="d-flex">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">

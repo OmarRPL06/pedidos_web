@@ -3,7 +3,7 @@
 
     <nav aria-label="breadcrumb" class="margin-breadcrumb">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{{ url('/index/cliente/omar') }}">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="{{ url('/') }}">Inicio</a></li>
             <li class="breadcrumb-item active" aria-current="page">Detalles de envío</li>
         </ol>
     </nav>
