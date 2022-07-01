@@ -20,6 +20,9 @@ body {
 }
 
 .container-map {
-    padding-top: 35px;
     padding-bottom: 40px;
+}
+
+.margin-breadcrumb {
+    padding-left: 10px;
 }

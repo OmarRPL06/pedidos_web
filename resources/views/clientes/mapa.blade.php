@@ -1,7 +1,12 @@
 @extends('layouts.base')
 @section('contenido')
-    {{-- <link rel="stylesheet" href="/gmaps/flatly.min.css"> --}}
-    {{-- <p>{{ $nombres }}{{ $email }}{{ $telefono }}{{ $calle }}{{ $num_calle }}{{ $colonia }}{{ $ciudad }}{{ $municipio }}{{ $estado }}{{ $c_postal }}</p> --}}
+
+    <nav aria-label="breadcrumb" class="margin-breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ url('/index/cliente/omar') }}">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Detalles de envío</li>
+        </ol>
+    </nav>
 
     @php
 
@@ -12,7 +17,8 @@
 
     $api_key = 'AIzaSyCY0xncx2QdWjlH4fDST9zxtBST93a1ad0'; // API Key Google Maps
 
-    $find = urlencode(trim($ciudad));
+    // $find = urlencode(trim("Calle Jersualen #74, Comunidad Lazaro Cardenas, Municipio de Yajalón, Chiapas, CP 29930"));
+    $find = urlencode(trim($calle . " #" . $num_calle . ", " . $colonia . ", " . $ciudad . ", Municipio de " . $municipio . ", " . $estado . ", CP " . $c_postal));
 
     // Webservices
     $google_maps_url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' . $find . '&key=' . $api_key;
@@ -37,7 +43,11 @@
             <div class="col-lg-4 col-10 order-lg-1 order-2">
                 <div class="card sombra">
                     <div class="card-header">
-                        <h3 class="card-title">Detalles de envío</h3>
+                        <h3 class="card-title">Detalles del envío:</h3>
+                        <hr>
+                        <p><b>ORIGEN DEL ENVÍO: </b>{{ $calle . " #" . $num_calle . ", " . $colonia . ", " . $ciudad . ", Municipio de " . $municipio . ", " . $estado . ", CP: " . $c_postal }}.</p>
+                        <hr>
+                        <p><b>DESTINO: </b>Universidad Tecnológica de la Selva, Entronque Toniná Km. 0.5 Carretera Ocosingo-Altamirano, Ocosingo, Chiapas, México. C.P. 29950.</p>
                     </div>
                     <div class="card-body">
                         <blockquote class="blockquote mb-0">
