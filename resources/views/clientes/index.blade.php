@@ -1,7 +1,7 @@
 @extends('layouts.base')
 @section('contenido')
     <div class="container-tittle">
-        <h3>Bienvenido, Calcula el precio de tu pedido</h3>
+        <h3>Bienvenido, Calcula el costo de tu envío</h3>
     </div>
     <div class="container-card">
         <div class="card">
