@@ -37,14 +37,14 @@
             <div class="col-lg-4 col-10 order-lg-1 order-2">
                 <div class="card sombra">
                     <div class="card-header">
-                        <h3 class="card-title">{{ $ciudad }}</h3>
+                        <h3 class="card-title">Detalles de envío</h3>
                     </div>
                     <div class="card-body">
                         <blockquote class="blockquote mb-0">
                             <p><strong>Distancia: </strong>{{ $distancia }}</p>
                             <p><strong>Duración: </strong>{{ $duracion }}</p>
                             @php
-                                $distancia_real = substr($distancia, 0, -3);
+                                $distancia_real = str_replace(',','',substr($distancia, 0, -3));
                             @endphp
                             @if ($distancia_real > 0 and $distancia_real <= 100)
                                 <p><strong>Costo de envío:</strong> $100.00 Pesos</p>
