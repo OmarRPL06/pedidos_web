@@ -15,7 +15,7 @@
     $longitude = null;
     $formatted_address = null;
 
-    $api_key = 'AIzaSyCY0xncx2QdWjlH4fDST9zxtBST93a1ad0'; // API Key Google Maps
+    $api_key = ''; // API Key Google Maps
 
     // $find = urlencode(trim("Calle Jersualen #74, Comunidad Lazaro Cardenas, Municipio de Yajalón, Chiapas, CP 29930"));
     $find = urlencode(trim($calle . " #" . $num_calle . ", " . $colonia . ", " . $ciudad . ", Municipio de " . $municipio . ", " . $estado . ", CP " . $c_postal));
